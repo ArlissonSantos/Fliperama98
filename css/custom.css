@@ -1,0 +1,167 @@
+/* --- ESTILO THE KING OF FIGHTERS / NEO GEO --- */
+
+/* Fonte de Impacto e Futurista (Lembra as telas de VS) */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Teko:wght@400;700&display=swap');
+
+/* --- FUNDO E ESTRUTURA (Scanlines de TV Antiga) --- */
+body {
+    background-color: #111;
+    /* O truque para parecer TV de Tubo (Scanlines) */
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.5) 3px
+    );
+    color: #fff;
+    font-family: 'Teko', sans-serif; /* Fonte alta e estreita */
+    font-size: 1.2rem;
+}
+
+/* --- TÍTULOS (Estilo "ROUND 1 - FIGHT") --- */
+h1, h2, h3, h4, .navbar-brand {
+    font-family: 'Russo One', sans-serif; /* Fonte grossa */
+    text-transform: uppercase;
+    font-style: italic; /* Inclinado para dar velocidade */
+    letter-spacing: 2px;
+    
+    /* Gradiente Dourado/Metálico no texto (Clássico KOF) */
+    background: linear-gradient(to bottom, #ffff00 0%, #ff9900 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+    
+    /* Contorno preto forte (Stroke) */
+    filter: drop-shadow(4px 4px 0px #000);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+
+/* --- MENU (Barra de Opções do Arcade) --- */
+.navbar {
+    background: #000 !important;
+    border-bottom: 4px solid #b30000; /* Linha vermelho sangue */
+    border-top: 4px solid #b30000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+.nav-link {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.nav-link:hover {
+    color: #ffff00 !important; /* Amarelo ao passar o mouse */
+    text-shadow: 0 0 10px #ff9900;
+    transform: skewX(-10deg); /* Inclina o texto ao passar o mouse */
+}
+
+/* --- CARDS (Parecem as caixas de seleção de personagem) --- */
+.card {
+    background-color: #222; /* Cinza Chumbo */
+    border: 3px solid #555; /* Borda Metálica */
+    border-radius: 0; /* Quadrado (anos 90 não tinham borda redonda) */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito de "Barra de Vida" no topo do Card */
+.card-header {
+    background: linear-gradient(90deg, #ffff00 0%, #ff0000 100%); /* Amarelo para Vermelho */
+    color: #000 !important;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    font-style: italic;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    text-shadow: none; /* Remove sombra do texto aqui para leitura */
+}
+
+.card-body {
+    background: radial-gradient(circle, #333 0%, #111 100%);
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 0 #000;
+}
+
+/* --- BOTÕES (Botões de Fliperama) --- */
+.btn {
+    border-radius: 50%; /* Botão redondo de Arcade */
+    width: 100%; /* Mantemos largo para o layout, mas com bordas arredondadas nas pontas */
+    border-radius: 10px; /* Levemente arredondado */
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    border: 3px solid rgba(0,0,0,0.5); /* Borda grossa para parecer 3D */
+    box-shadow: inset 0 5px 10px rgba(255,255,255,0.4), 0 5px 0 #000; /* Brilho e relevo */
+    transition: all 0.1s;
+    margin-top: 10px;
+}
+
+/* Cores específicas dos botões */
+.btn-primary { background-color: #0044cc; } /* Azul (Chute Fraco) */
+.btn-warning { background-color: #ffcc00; color: #000; } /* Amarelo (Soco Forte) */
+.btn-success { background-color: #00cc44; } /* Verde (Chute Forte) */
+.btn-info    { background-color: #cc00cc; color: #fff; } /* Roxo (Especial) */
+
+/* Efeito de apertar o botão */
+.btn:active {
+    transform: translateY(4px); /* Botão afunda */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.6), 0 1px 0 #000; /* Sombra diminui */
+}
+
+/* --- MODAIS (Tela de "VS") --- */
+.modal-content {
+    background-color: #000;
+    border: 4px solid #fff;
+    color: #fff;
+    border-radius: 0;
+}
+
+.modal-header {
+    background: #b30000; /* Fundo vermelho KOF */
+    border-bottom: 2px solid #fff;
+}
+
+.modal-title {
+    -webkit-text-fill-color: #fff; /* Título branco sólido no modal */
+    font-style: italic;
+}
+
+.btn-close {
+    background-color: #fff; /* X branco */
+    opacity: 1;
+}
+
+/* --- ANIMAÇÃO "INSERT COIN" (Pisca-Pisca) --- */
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Classe extra se quiser usar em algum texto: <p class="insert-coin"> */
+.insert-coin {
+    color: #00ff00; /* Verde Neon */
+    font-family: 'Russo One', sans-serif;
+    animation: piscar 1s infinite;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Força o texto descritivo do card a ficar branco */
+.card-text {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 1px #000; /* Sombra leve para leitura */
+}
+
+/* Garante que links dentro do texto também fiquem claros */
+.card-body p {
+    color: #e0e0e0;
+}
