@@ -30,6 +30,8 @@ Atualmente, o projeto conta com os seguintes títulos:
 
 🧩 Hextris: Um quebra-cabeça de ritmo rápido inspirado no Tetris.
 
+Em breve mais títulos!!
+
 💻 Tecnologias Utilizadas
 
 HTML5 Semântico: Estrutura das páginas.
@@ -75,6 +77,10 @@ Depois, acesse http://localhost:8000 no seu navegador.
 └── css/
     └── custom.css  # Estilos personalizados (Tema Arcade)
 
+
+ou
+
+Pode Acessar direto  Pelo Link https://fliperama98.netlify.app
 
 👏 Créditos e Agradecimentos
 
